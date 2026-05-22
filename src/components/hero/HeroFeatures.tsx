@@ -3,7 +3,7 @@ import { HERO_FEATURES } from "@/lib/hero-data";
 
 export function HeroFeatures() {
   return (
-    <ul className="flex flex-col gap-6 sm:flex-row sm:gap-5 lg:gap-6">
+    <ul className="flex flex-col gap-4 sm:flex-row sm:gap-4 lg:gap-5">
       {HERO_FEATURES.map((feature) => (
         <HeroFeatureItem
           key={feature.id}

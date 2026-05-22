@@ -16,7 +16,7 @@ export function Hero({ imageSrc, promoImageSrc }: HeroProps) {
       aria-labelledby="hero-title"
     >
       <div className="relative mx-auto max-w-[var(--kba-container-max)] px-5 sm:px-8">
-        <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-10 xl:gap-14">
+        <div className="grid grid-cols-1 items-center gap-6 lg:grid-cols-2 lg:gap-8 xl:gap-10">
           <HeroContent />
           <HeroVisual imageSrc={imageSrc} promoImageSrc={promoImageSrc} />
         </div>

@@ -10,7 +10,7 @@ type HeroVisualProps = {
 
 export function HeroVisual({ imageSrc, promoImageSrc }: HeroVisualProps) {
   return (
-    <div className="relative flex items-center justify-center py-8 sm:py-10 lg:py-12">
+    <div className="relative flex items-center justify-center py-4 sm:py-6 lg:py-8">
       <div className="relative w-full max-w-md lg:max-w-none">
         <HeroImage src={imageSrc} />
         <HeroStatBadges />

@@ -11,7 +11,7 @@ export function HeroImage({
   alt = "Experte prothésiste ongulaire et extensions de cils",
 }: HeroImageProps) {
   return (
-    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-gradient-to-br from-[#f3e4e2] via-[#f8ebe9] to-[#edd8d6] shadow-[0_20px_50px_rgba(196,137,137,0.15)]">
+    <div className="relative h-[min(340px,58vh)] w-full overflow-hidden rounded-2xl bg-gradient-to-br from-[#f3e4e2] via-[#f8ebe9] to-[#edd8d6] shadow-[0_16px_40px_rgba(196,137,137,0.12)] sm:h-[380px] lg:h-[420px]">
       {src ? (
         <Image
           src={src}

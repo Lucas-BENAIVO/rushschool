@@ -8,8 +8,8 @@ type HeroFeatureItemProps = {
 
 export function HeroFeatureItem({ title, description, icon }: HeroFeatureItemProps) {
   return (
-    <li className="flex min-w-0 flex-1 flex-col gap-2 sm:max-w-[200px]">
-      <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[var(--kba-primary)]/15 text-[var(--kba-primary)]">
+    <li className="flex min-w-0 flex-1 flex-col gap-1.5 sm:max-w-[200px]">
+      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--kba-primary)]/15 text-[var(--kba-primary)]">
         <FeatureIcon name={icon} />
       </div>
       <div>
