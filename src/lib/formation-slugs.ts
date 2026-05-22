@@ -3,4 +3,5 @@ export const FORMATION_SLUGS: Record<string, string> = {
   "cils-a-cil": "Cil à Cil",
   "volume-russe": "Volume Russe",
   "nail-art": "Nail Art",
+  "business-branding": "Business & Branding",
 };
