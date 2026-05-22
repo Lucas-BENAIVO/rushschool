@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import heroPortrait from "@/assets/image.jpg";
 import promoFormationImage from "@/assets/prothesie-ongulaire.jpg";
+import formationBrandImage from "@/assets/brand.jpeg";
+import formationCilsACilImage from "@/assets/cilacil.jpeg";
+import formationNailArtImage from "@/assets/nail.jpeg";
+import formationVolumeRusseImage from "@/assets/cilrusse.jpeg";
 import formationProthesisteImage from "@/assets/prothesie-ongulaire.jpg";
 import { FeaturedFormations } from "@/components/formations";
 import { Hero } from "@/components/hero";
@@ -18,6 +22,10 @@ export default function Home() {
       <FeaturedFormations
         images={{
           prothesiste: formationProthesisteImage,
+          "cils-cil-a-cil": formationCilsACilImage,
+          "volume-russe": formationVolumeRusseImage,
+          "nail-art": formationNailArtImage,
+          business: formationBrandImage,
         }}
       />
       <section
