@@ -1,7 +1,13 @@
 export function HeroBadge() {
   return (
-    <span className="inline-flex items-center rounded-full border border-[var(--kba-charcoal)]/20 bg-white/60 px-3.5 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--kba-charcoal)]">
-      Devenez experte
-    </span>
+    <p className="inline-flex items-center gap-2.5">
+      <span
+        className="h-[3px] w-8 shrink-0 rounded-full bg-[var(--kba-primary)]"
+        aria-hidden
+      />
+      <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[var(--kba-primary)]">
+        Devenez experte
+      </span>
+    </p>
   );
 }
