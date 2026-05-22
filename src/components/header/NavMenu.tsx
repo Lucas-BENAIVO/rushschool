@@ -1,13 +1,14 @@
 import { NavLink } from "@/components/header/NavLink";
+import { ROUTES } from "@/lib/routes";
 
 const NAV_ITEMS = [
-  { href: "/", label: "Accueil" },
-  { href: "/formations", label: "Formations", hasDropdown: true },
-  { href: "/boutique", label: "Boutique" },
-  { href: "/a-propos", label: "À propos" },
-  { href: "/avis-eleves", label: "Avis élèves" },
-  { href: "/blog", label: "Blog" },
-  { href: "/contact", label: "Contact" },
+  { href: ROUTES.home, label: "Accueil" },
+  { href: ROUTES.formations, label: "Formations", hasDropdown: true },
+  { href: ROUTES.boutique, label: "Boutique" },
+  { href: ROUTES.aPropos, label: "À propos" },
+  { href: ROUTES.avisEleves, label: "Avis élèves" },
+  { href: ROUTES.blog, label: "Blog" },
+  { href: ROUTES.contact, label: "Contact" },
 ] as const;
 
 export function NavMenu() {

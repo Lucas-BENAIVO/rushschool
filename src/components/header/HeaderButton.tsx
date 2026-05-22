@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ROUTES } from "@/lib/routes";
 
 type HeaderButtonProps = {
   href?: string;
@@ -7,7 +8,7 @@ type HeaderButtonProps = {
 };
 
 export function HeaderButton({
-  href = "#reserver",
+  href = ROUTES.reserverAppel,
   label,
   variant = "primary",
 }: HeaderButtonProps) {

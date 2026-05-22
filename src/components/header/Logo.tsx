@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { ROUTES } from "@/lib/routes";
 
 export function Logo() {
   return (
     <Link
-      href="/"
+      href={ROUTES.home}
       className="group flex shrink-0 items-center gap-2 no-underline"
     >
       <span className="font-serif text-[2.5rem] font-normal leading-none text-[var(--kba-charcoal)] transition-colors group-hover:text-[var(--kba-primary)]">

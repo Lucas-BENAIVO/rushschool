@@ -2,12 +2,13 @@ import Link from "next/link";
 import { BagIcon } from "@/components/icons/BagIcon";
 import { SearchIcon } from "@/components/icons/SearchIcon";
 import { HeaderButton } from "@/components/header/HeaderButton";
+import { ROUTES } from "@/lib/routes";
 
 export function HeaderActions() {
   return (
     <div className="flex shrink-0 items-center gap-4 sm:gap-5">
       <Link
-        href="/recherche"
+        href={ROUTES.recherche}
         className="text-[var(--kba-charcoal)] transition-colors hover:text-[var(--kba-primary)]"
         aria-label="Rechercher"
       >
@@ -15,7 +16,7 @@ export function HeaderActions() {
       </Link>
 
       <Link
-        href="/panier"
+        href={ROUTES.panier}
         className="relative text-[var(--kba-charcoal)] transition-colors hover:text-[var(--kba-primary)]"
         aria-label="Panier, 0 article"
       >
@@ -29,7 +30,7 @@ export function HeaderActions() {
       </Link>
 
       <div className="hidden sm:block">
-        <HeaderButton label="Réserver un appel" />
+        <HeaderButton href={ROUTES.reserverAppel} label="Réserver un appel" />
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ROUTES } from "@/lib/routes";
 
 export function TopBanner() {
   return (
@@ -11,7 +12,7 @@ export function TopBanner() {
         OFFRE DE LANCEMENT : -10% sur toutes nos formations jusqu&apos;au 31
         Mai !{" "}
         <Link
-          href="#offre"
+          href={ROUTES.offreLancement}
           className="font-semibold text-[var(--kba-charcoal)] underline decoration-[var(--kba-primary)] decoration-1 underline-offset-2 transition-colors hover:text-[var(--kba-primary)]"
         >
           Découvrir l&apos;offre
