@@ -8,7 +8,7 @@ export function FooterNewsletter() {
         Conseils, nouveautés, offres exclusives…
       </p>
       <form
-        className="flex max-w-sm flex-col gap-2 sm:flex-row sm:items-stretch"
+        className="flex w-full max-w-sm flex-col gap-3 sm:flex-row sm:items-stretch sm:gap-2"
         action="#"
         method="post"
         aria-label="Inscription newsletter"
@@ -23,11 +23,11 @@ export function FooterNewsletter() {
           required
           placeholder="Ton email"
           autoComplete="email"
-          className="h-10 min-w-0 flex-1 rounded-md border border-[var(--kba-footer-border)] bg-transparent px-3 text-[14px] text-white placeholder:text-white/40 outline-none transition-colors focus:border-[var(--kba-primary)]"
+          className="box-border h-12 min-h-12 w-full min-w-0 flex-1 rounded-md border border-[var(--kba-footer-border)] bg-transparent px-4 py-3 text-base text-white placeholder:text-white/40 outline-none transition-colors focus:border-[var(--kba-primary)] sm:h-10 sm:min-h-10 sm:px-3 sm:py-2 sm:text-[14px]"
         />
         <button
           type="submit"
-          className="inline-flex h-10 shrink-0 items-center justify-center rounded-md bg-[var(--kba-primary)] px-5 text-[13px] font-semibold tracking-wide text-white transition-colors hover:bg-[var(--kba-primary-hover)]"
+          className="inline-flex h-12 w-full shrink-0 items-center justify-center rounded-md bg-[var(--kba-primary)] px-5 text-[15px] font-semibold tracking-wide text-white transition-colors hover:bg-[var(--kba-primary-hover)] sm:h-10 sm:w-auto sm:text-[13px]"
         >
           Rejoindre
         </button>
