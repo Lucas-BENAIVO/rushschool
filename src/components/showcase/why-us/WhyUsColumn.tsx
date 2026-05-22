@@ -10,12 +10,12 @@ export function WhyUsColumn() {
 
   return (
     <div
-      className="flex h-full flex-col gap-4 rounded-xl p-4 sm:p-5"
+      className="flex h-full w-full flex-col gap-4 rounded-xl p-4 sm:p-5 lg:gap-5"
       style={{ backgroundColor: "var(--kba-why-us-bg)" }}
     >
       <ShowcaseEyebrow centered>{eyebrow}</ShowcaseEyebrow>
 
-      <ul className="flex flex-1 flex-col gap-2.5">
+      <ul className="flex flex-1 flex-col justify-between gap-3 py-1 lg:gap-0 lg:py-2">
         {WHY_US_ITEMS.map((item) => (
           <WhyUsItem key={item} label={item} />
         ))}

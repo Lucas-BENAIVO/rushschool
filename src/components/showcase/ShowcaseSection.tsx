@@ -23,8 +23,8 @@ export function ShowcaseSection({
       aria-label="Résultats, boutique et avantages"
     >
       <div className="mx-auto max-w-[var(--kba-container-max)] px-5 sm:px-8">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-start lg:gap-6 xl:gap-8">
-          <div className="flex flex-col gap-5 lg:col-span-9">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-stretch lg:gap-6 xl:gap-8">
+          <div className="flex flex-col gap-5 lg:col-span-9 lg:min-h-0">
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-9 lg:gap-4">
               <div className="lg:col-span-4">
                 <ResultsHeader />
@@ -49,7 +49,7 @@ export function ShowcaseSection({
             </div>
           </div>
 
-          <div className="lg:col-span-3">
+          <div className="flex lg:col-span-3">
             <WhyUsColumn />
           </div>
         </div>
