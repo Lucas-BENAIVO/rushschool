@@ -1,11 +1,11 @@
 import { HeroContent } from "@/components/hero/HeroContent";
 import { HeroSocialSidebar } from "@/components/hero/HeroSocialSidebar";
 import { HeroVisual } from "@/components/hero/HeroVisual";
+import type { ImageSource } from "@/types/images";
 
 type HeroProps = {
-  /** Chemin public de l'image principale */
-  imageSrc?: string;
-  promoImageSrc?: string;
+  imageSrc?: ImageSource;
+  promoImageSrc?: ImageSource;
 };
 
 export function Hero({ imageSrc, promoImageSrc }: HeroProps) {

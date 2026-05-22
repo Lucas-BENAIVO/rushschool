@@ -1,8 +1,8 @@
 import Image from "next/image";
+import type { ImageSource } from "@/types/images";
 
 type HeroImageProps = {
-  /** Chemin public, ex. /images/hero/portrait.jpg — laisser vide pour le placeholder */
-  src?: string;
+  src?: ImageSource;
   alt?: string;
 };
 
@@ -29,7 +29,7 @@ export function HeroImage({
           <span className="text-[13px] text-[var(--kba-muted)]">
             Ajoutez votre photo dans{" "}
             <code className="rounded bg-white/50 px-1.5 py-0.5 text-[12px]">
-              public/images/hero/
+              src/assets/
             </code>
           </span>
         </div>

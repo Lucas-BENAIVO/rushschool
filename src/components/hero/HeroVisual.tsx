@@ -1,12 +1,11 @@
 import { HeroImage } from "@/components/hero/HeroImage";
 import { HeroPromoCard } from "@/components/hero/HeroPromoCard";
 import { HeroStatBadges } from "@/components/hero/HeroStatBadges";
+import type { ImageSource } from "@/types/images";
 
 type HeroVisualProps = {
-  /** Image principale — ex. /images/hero/portrait.jpg */
-  imageSrc?: string;
-  /** Miniature carte promo */
-  promoImageSrc?: string;
+  imageSrc?: ImageSource;
+  promoImageSrc?: ImageSource;
 };
 
 export function HeroVisual({ imageSrc, promoImageSrc }: HeroVisualProps) {
@@ -15,7 +14,7 @@ export function HeroVisual({ imageSrc, promoImageSrc }: HeroVisualProps) {
       <div className="relative w-full max-w-md lg:max-w-none">
         <HeroImage src={imageSrc} />
         <HeroStatBadges />
-        <HeroPromoCard imageSrc={promoImageSrc} />
+        <HeroPromoCard imageSrc={promoImageSrc ?? imageSrc} />
       </div>
     </div>
   );

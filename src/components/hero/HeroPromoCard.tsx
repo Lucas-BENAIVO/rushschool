@@ -2,10 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon } from "@/components/icons/ArrowRightIcon";
 import { HERO_PROMO_CARD } from "@/lib/hero-data";
+import type { ImageSource } from "@/types/images";
 
 type HeroPromoCardProps = {
-  /** Miniature optionnelle — ex. /images/hero/promo-thumb.jpg */
-  imageSrc?: string;
+  imageSrc?: ImageSource;
 };
 
 export function HeroPromoCard({ imageSrc }: HeroPromoCardProps) {
@@ -18,7 +18,13 @@ export function HeroPromoCard({ imageSrc }: HeroPromoCardProps) {
     >
       <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-lg bg-gradient-to-br from-[#f3e4e2] to-[#e8d4d2]">
         {imageSrc ? (
-          <Image src={imageSrc} alt={imageAlt} fill className="object-cover" />
+          <Image
+            src={imageSrc}
+            alt={imageAlt}
+            fill
+            className="object-cover object-center"
+            sizes="56px"
+          />
         ) : (
           <div className="flex h-full w-full items-center justify-center text-[9px] font-medium uppercase tracking-wide text-[var(--kba-muted)]">
             Photo
