@@ -8,6 +8,9 @@
   --kba-muted: #5c5c5c;
   --kba-white: #ffffff;
   --kba-badge: #e07070;
+  --kba-footer-bg: #121212;
+  --kba-footer-muted: #a8a8a8;
+  --kba-footer-border: rgba(255, 255, 255, 0.15);
 
   --kba-nav-height: 72px;
   --kba-banner-height: 40px;

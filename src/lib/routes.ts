@@ -11,6 +11,17 @@ export const ROUTES = {
   panier: "/panier",
   offreLancement: "/#offre",
   reserverAppel: "/contact",
+  financement: "/financement",
+  conditionsGenerales: "/conditions-generales",
+  faq: "/faq",
 } as const;
+
+export function formationPath(slug: string) {
+  return `${ROUTES.formations}/${slug}`;
+}
+
+export function boutiquePath(slug: string) {
+  return `${ROUTES.boutique}/${slug}`;
+}
 
 export type RoutePath = (typeof ROUTES)[keyof typeof ROUTES];
