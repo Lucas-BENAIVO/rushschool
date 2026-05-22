@@ -14,7 +14,7 @@ export function HeroVisual({ imageSrc, promoImageSrc }: HeroVisualProps) {
       <div className="relative w-full max-w-md lg:max-w-none">
         <HeroImage src={imageSrc} />
         <HeroStatBadges />
-        <HeroPromoCard imageSrc={promoImageSrc ?? imageSrc} />
+        <HeroPromoCard imageSrc={promoImageSrc} />
       </div>
     </div>
   );
