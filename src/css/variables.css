@@ -1,0 +1,15 @@
+:root {
+  /* K Beauty Academy — palette maquette */
+  --kba-banner-bg: #f8ebe9;
+  --kba-banner-text: #4a3f3f;
+  --kba-primary: #c48989;
+  --kba-primary-hover: #b37878;
+  --kba-charcoal: #2c2c2c;
+  --kba-muted: #5c5c5c;
+  --kba-white: #ffffff;
+  --kba-badge: #e07070;
+
+  --kba-nav-height: 72px;
+  --kba-banner-height: 40px;
+  --kba-container-max: 1280px;
+}
