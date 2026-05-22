@@ -8,6 +8,7 @@ import formationVolumeRusseImage from "@/assets/cilrusse.jpeg";
 import formationProthesisteImage from "@/assets/prothesie-ongulaire.jpg";
 import { FeaturedFormations } from "@/components/formations";
 import { Hero } from "@/components/hero";
+import { ShowcaseSection } from "@/components/showcase";
 
 export const metadata: Metadata = {
   title: {
@@ -28,6 +29,7 @@ export default function Home() {
           business: formationBrandImage,
         }}
       />
+      <ShowcaseSection />
       <section
         id="offre"
         className="sr-only"
