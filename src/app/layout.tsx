@@ -16,7 +16,10 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "K Beauty Academy — Formations ongles & cils",
+  title: {
+    default: "K Beauty Academy",
+    template: "%s | K Beauty Academy",
+  },
   description:
     "Formations professionnelles en prothésie ongulaire et extensions de cils.",
 };
