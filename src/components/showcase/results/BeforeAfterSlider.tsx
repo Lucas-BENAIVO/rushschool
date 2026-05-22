@@ -20,8 +20,8 @@ export function BeforeAfterSlider({
   const [position, setPosition] = useState(50);
 
   return (
-    <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-[#f3e4e2] to-[#e8d4d2] shadow-[0_4px_20px_rgba(0,0,0,0.06)]">
-      <div className="relative aspect-[16/10] w-full">
+    <div className="relative h-full overflow-hidden rounded-xl bg-gradient-to-br from-[#f3e4e2] to-[#e8d4d2] shadow-[0_4px_20px_rgba(0,0,0,0.06)]">
+      <div className="relative aspect-[16/10] w-full lg:absolute lg:inset-0 lg:aspect-auto lg:min-h-[220px]">
         {/* Après (fond) */}
         <div className="absolute inset-0">
           {afterSrc ? (
