@@ -12,7 +12,7 @@ type FormationCardProps = {
 
 export function FormationCard({ formation, imageSrc }: FormationCardProps) {
   return (
-    <article className="flex h-full flex-col overflow-hidden rounded-xl bg-white shadow-[0_4px_24px_rgba(0,0,0,0.06)]">
+    <article className="flex flex-col overflow-hidden rounded-xl bg-white shadow-[0_4px_24px_rgba(0,0,0,0.06)]">
       <div className="relative">
         <FormationCardImage
           src={imageSrc}
@@ -22,22 +22,22 @@ export function FormationCard({ formation, imageSrc }: FormationCardProps) {
         {formation.badge === "best-seller" && <FormationCardBadge />}
       </div>
 
-      <div className="flex flex-1 flex-col gap-4 p-4 sm:p-5">
+      <div className="flex flex-col gap-2.5 p-3 sm:p-3.5">
         <div>
-          <h3 className="font-serif text-lg font-medium leading-snug text-[var(--kba-charcoal)]">
+          <h3 className="font-serif text-base font-medium leading-snug text-[var(--kba-charcoal)]">
             {formation.title}
           </h3>
-          <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-[var(--kba-muted)]">
+          <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-[0.16em] text-[var(--kba-muted)]">
             {formation.subtitle}
           </p>
-          <p className="mt-2 text-xl font-bold text-[var(--kba-charcoal)]">
+          <p className="mt-1 text-lg font-bold text-[var(--kba-charcoal)]">
             {formation.price}
           </p>
         </div>
 
         <FormationCardFeatures features={formation.features} />
 
-        <div className="mt-auto pt-1">
+        <div>
           <FormationCardButton
             href={formation.href}
             label={formation.ctaLabel}

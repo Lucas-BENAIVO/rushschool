@@ -7,7 +7,7 @@ import { HeroTitle } from "@/components/hero/HeroTitle";
 
 export function HeroContent() {
   return (
-    <div className="flex flex-col justify-center gap-4 py-6 sm:gap-5 sm:py-8 lg:py-10">
+    <div className="flex flex-col justify-center gap-4 pt-6 pb-3 sm:gap-5 sm:pt-8 sm:pb-4 lg:pt-10 lg:pb-5">
       <HeroBadge />
       <HeroTitle />
       <HeroSubtitle />

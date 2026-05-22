@@ -9,7 +9,7 @@ type FeaturedFormationsProps = {
 export function FeaturedFormations({ images }: FeaturedFormationsProps) {
   return (
     <section
-      className="w-full py-12 sm:py-16 lg:py-20"
+      className="w-full pt-6 pb-8 sm:pt-8 sm:pb-10 lg:pt-10 lg:pb-12"
       style={{ backgroundColor: "var(--kba-formations-bg)" }}
       aria-labelledby="formations-phares-title"
     >

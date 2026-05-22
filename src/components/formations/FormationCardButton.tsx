@@ -15,7 +15,7 @@ export function FormationCardButton({
   outlineTextPrimary = false,
 }: FormationCardButtonProps) {
   const base =
-    "flex h-10 w-full items-center justify-center rounded-lg text-[13px] font-semibold transition-colors";
+    "flex h-9 w-full items-center justify-center rounded-lg text-[12px] font-semibold transition-colors";
 
   const styles =
     variant === "primary"

@@ -13,7 +13,7 @@ export function FormationCardImage({
   imageFile,
 }: FormationCardImageProps) {
   return (
-    <div className="relative aspect-[4/3] w-full overflow-hidden rounded-t-xl bg-gradient-to-br from-[#f3e4e2] to-[#e8d4d2]">
+    <div className="relative aspect-[5/3] w-full overflow-hidden rounded-t-xl bg-gradient-to-br from-[#f3e4e2] to-[#e8d4d2]">
       {src ? (
         <Image
           src={src}
