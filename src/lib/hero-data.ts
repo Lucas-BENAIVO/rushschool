@@ -39,10 +39,3 @@ export const HERO_SOCIAL_PROOF = {
   rating: 4.9,
   reviewCount: "+2500 élèves déjà formés avec succès",
 };
-
-export const HERO_AVATARS = [
-  { id: "1", initials: "ML", color: "#e8b4b4" },
-  { id: "2", initials: "SA", color: "#d4a5a5" },
-  { id: "3", initials: "JC", color: "#c48989" },
-  { id: "4", initials: "EM", color: "#b37878" },
-] as const;

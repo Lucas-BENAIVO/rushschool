@@ -1,19 +1,27 @@
-import { HERO_AVATARS } from "@/lib/hero-data";
+import Image from "next/image";
+import profilImage from "@/assets/profil.jpeg";
+
+const AVATAR_COUNT = 4;
 
 export function HeroAvatars() {
   return (
     <ul className="flex items-center" aria-label="Élèves formées">
-      {HERO_AVATARS.map((avatar, index) => (
+      {Array.from({ length: AVATAR_COUNT }).map((_, index) => (
         <li
-          key={avatar.id}
-          className="relative flex h-9 w-9 items-center justify-center rounded-full border-2 border-white text-[10px] font-semibold text-white"
+          key={index}
+          className="relative h-9 w-9 overflow-hidden rounded-full border-2 border-white bg-[var(--kba-primary)]/20"
           style={{
-            backgroundColor: avatar.color,
             marginLeft: index === 0 ? 0 : "-10px",
-            zIndex: HERO_AVATARS.length - index,
+            zIndex: AVATAR_COUNT - index,
           }}
         >
-          {avatar.initials}
+          <Image
+            src={profilImage}
+            alt={index === 0 ? "Élève formée K Beauty Academy" : ""}
+            fill
+            className="object-cover object-center"
+            sizes="36px"
+          />
         </li>
       ))}
     </ul>
