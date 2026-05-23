@@ -6,8 +6,8 @@ export const RESULTS_CONTENT = {
   ctaLabel: "Voir tous les témoignages",
   ctaHref: ROUTES.avisEleves,
   socialProof: "+2500 élèves satisfaites",
-  beforeImageFile: "ongles-avant.jpg",
-  afterImageFile: "ongles-apres.jpg",
+  beforeImageFile: "avant.jpg",
+  afterImageFile: "apres.jpg",
 };
 
 export const SHOP_CONTENT = {

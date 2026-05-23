@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import apresImage from "@/assets/apres.jpg";
+import avantImage from "@/assets/avant.jpg";
 import heroPortrait from "@/assets/image.jpg";
 import promoFormationImage from "@/assets/prothesie-ongulaire.jpg";
 import formationBrandImage from "@/assets/brand.jpeg";
@@ -29,7 +31,12 @@ export default function Home() {
           business: formationBrandImage,
         }}
       />
-      <ShowcaseSection />
+      <ShowcaseSection
+        resultsImages={{
+          before: avantImage,
+          after: apresImage,
+        }}
+      />
       <section
         id="offre"
         className="sr-only"
