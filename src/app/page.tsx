@@ -4,6 +4,7 @@ import avantImage from "@/assets/avant.jpg";
 import kit2ShopImage from "@/assets/kit2.jpg";
 import kit3ShopImage from "@/assets/kit3.jpg";
 import kitShopImage from "@/assets/kit.jpg";
+import promoCoursImage from "@/assets/cours.jpg";
 import heroPortrait from "@/assets/image.jpg";
 import promoFormationImage from "@/assets/prothesie-ongulaire.jpg";
 import formationBrandImage from "@/assets/brand.jpeg";
@@ -13,6 +14,7 @@ import formationVolumeRusseImage from "@/assets/cilrusse.jpeg";
 import formationProthesisteImage from "@/assets/prothesie-ongulaire.jpg";
 import { FeaturedFormations } from "@/components/formations";
 import { Hero } from "@/components/hero";
+import { PromoBanner } from "@/components/promo-banner";
 import { ShowcaseSection } from "@/components/showcase";
 
 export const metadata: Metadata = {
@@ -45,10 +47,12 @@ export default function Home() {
           "lampe-uv": kit3ShopImage,
         }}
       />
-      <section
-        id="offre"
-        className="sr-only"
-        aria-label="Offre de lancement"
+      <PromoBanner
+        galleryImages={{
+          classroom: promoCoursImage,
+          practice: formationNailArtImage,
+          result: formationProthesisteImage,
+        }}
       />
     </main>
   );
