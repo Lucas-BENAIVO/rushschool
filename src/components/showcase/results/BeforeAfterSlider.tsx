@@ -25,7 +25,7 @@ export function BeforeAfterSlider({
   const safePosition = Math.max(position, 1);
 
   useEffect(() => {
-    setIsInteractive(true);
+    queueMicrotask(() => setIsInteractive(true));
   }, []);
   const beforeLayerWidth = `${(100 / safePosition) * 100}%`;
 

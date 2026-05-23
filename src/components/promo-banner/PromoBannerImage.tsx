@@ -10,8 +10,8 @@ type PromoBannerImageProps = {
 };
 
 const LAYOUT_CLASSES: Record<PromoGalleryLayout, string> = {
-  wide: "h-[112px] min-w-0 flex-[1.85] sm:h-[124px] lg:h-[136px]",
-  tall: "h-[112px] min-w-0 flex-1 sm:h-[124px] lg:h-[136px]",
+  wide: "h-[100px] min-w-0 flex-[1.85] sm:h-[120px] lg:h-[136px]",
+  tall: "h-[100px] min-w-0 flex-1 sm:h-[120px] lg:h-[136px]",
 };
 
 export function PromoBannerImage({

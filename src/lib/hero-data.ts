@@ -1,4 +1,4 @@
-import { ROUTES, formationPath } from "@/lib/routes";
+import { formationPath } from "@/lib/routes";
 
 export const HERO_FEATURES = [
   {

@@ -8,11 +8,17 @@ export type PromoGalleryImagesMap = Partial<
 
 type PromoBannerGalleryProps = {
   images?: PromoGalleryImagesMap;
+  className?: string;
 };
 
-export function PromoBannerGallery({ images = {} }: PromoBannerGalleryProps) {
+export function PromoBannerGallery({
+  images = {},
+  className = "",
+}: PromoBannerGalleryProps) {
   return (
-    <div className="flex w-full max-w-[min(100%,420px)] items-center justify-start gap-2 sm:max-w-[460px] sm:gap-2.5 lg:max-w-[500px]">
+    <div
+      className={`flex w-full items-center justify-start gap-2 sm:gap-2.5 ${className}`.trim()}
+    >
       {PROMO_GALLERY_IMAGES.map((item) => (
         <PromoBannerImage
           key={item.id}

@@ -34,7 +34,7 @@ body {
 
 @keyframes mobile-menu-drawer-in {
   from {
-    transform: translateX(100%);
+    transform: translateX(-100%);
   }
   to {
     transform: translateX(0);
@@ -42,9 +42,10 @@ body {
 }
 
 .mobile-menu-overlay {
-  animation: mobile-menu-overlay-in 0.22s ease-out forwards;
+  animation: mobile-menu-overlay-in 0.2s ease-out forwards;
 }
 
 .mobile-menu-drawer {
-  animation: mobile-menu-drawer-in 0.28s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.08);
+  animation: mobile-menu-drawer-in 0.26s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
