@@ -23,6 +23,7 @@ export function FooterNewsletter() {
           required
           placeholder="Ton email"
           autoComplete="email"
+          suppressHydrationWarning
           className="box-border h-12 min-h-12 w-full min-w-0 flex-1 rounded-md border border-[var(--kba-footer-border)] bg-transparent px-4 py-3 text-base text-white placeholder:text-white/40 outline-none transition-colors focus:border-[var(--kba-primary)] sm:h-10 sm:min-h-10 sm:px-3 sm:py-2 sm:text-[14px]"
         />
         <button

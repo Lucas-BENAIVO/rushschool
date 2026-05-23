@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { ImageSource } from "@/types/images";
 
 type BeforeAfterSliderProps = {
@@ -21,7 +21,12 @@ export function BeforeAfterSlider({
   afterImageFile,
 }: BeforeAfterSliderProps) {
   const [position, setPosition] = useState(50);
+  const [isInteractive, setIsInteractive] = useState(false);
   const safePosition = Math.max(position, 1);
+
+  useEffect(() => {
+    setIsInteractive(true);
+  }, []);
   const beforeLayerWidth = `${(100 / safePosition) * 100}%`;
 
   return (
@@ -100,21 +105,26 @@ export function BeforeAfterSlider({
         </span>
       </div>
 
-      <label className="sr-only" htmlFor="before-after-range">
-        Comparer avant et après
-      </label>
-      <input
-        id="before-after-range"
-        type="range"
-        min={0}
-        max={100}
-        value={position}
-        onChange={(e) => setPosition(Number(e.target.value))}
-        className="absolute inset-0 z-20 h-full w-full cursor-ew-resize opacity-0"
-        aria-valuemin={0}
-        aria-valuemax={100}
-        aria-valuenow={position}
-      />
+      {isInteractive ? (
+        <>
+          <label className="sr-only" htmlFor="before-after-range">
+            Comparer avant et après
+          </label>
+          <input
+            id="before-after-range"
+            type="range"
+            min={0}
+            max={100}
+            value={position}
+            onChange={(e) => setPosition(Number(e.target.value))}
+            className="absolute inset-0 z-20 h-full w-full cursor-ew-resize opacity-0"
+            aria-valuemin={0}
+            aria-valuemax={100}
+            aria-valuenow={position}
+            suppressHydrationWarning
+          />
+        </>
+      ) : null}
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import { HeaderActions } from "@/components/header/HeaderActions";
 import { Logo } from "@/components/header/Logo";
+import { MobileMenu } from "@/components/header/MobileMenu";
 import { NavMenu } from "@/components/header/NavMenu";
-import { MenuIcon } from "@/components/icons/MenuIcon";
 
 export function Navbar() {
   return (
@@ -13,15 +13,9 @@ export function Navbar() {
           <NavMenu />
         </div>
 
-        <div className="flex items-center gap-3 sm:gap-4">
-          <button
-            type="button"
-            className="inline-flex h-10 w-10 items-center justify-center text-[var(--kba-charcoal)] transition-colors hover:text-[var(--kba-primary)] lg:hidden"
-            aria-label="Ouvrir le menu"
-          >
-            <MenuIcon />
-          </button>
+        <div className="flex items-center gap-2 sm:gap-3">
           <HeaderActions />
+          <MobileMenu />
         </div>
       </div>
     </header>
