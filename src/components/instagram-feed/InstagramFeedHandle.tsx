@@ -12,7 +12,7 @@ export function InstagramFeedHandle({ handle, href }: InstagramFeedHandleProps) 
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="font-serif text-xl font-medium tracking-tight text-[var(--kba-charcoal)] transition-colors hover:text-[var(--kba-primary)] sm:text-2xl"
+      className="font-serif text-[15px] font-medium tracking-tight text-[var(--kba-charcoal)] transition-colors hover:text-[var(--kba-primary)] sm:text-[17px]"
     >
       {handle}
     </Link>

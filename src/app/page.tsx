@@ -5,6 +5,13 @@ import kit2ShopImage from "@/assets/kit2.jpg";
 import kit3ShopImage from "@/assets/kit3.jpg";
 import kitShopImage from "@/assets/kit.jpg";
 import promoCoursImage from "@/assets/cours.jpg";
+import instagramFeed1 from "@/assets/feed1.jpg";
+import instagramFeed2 from "@/assets/feed2.jpeg";
+import instagramFeed3 from "@/assets/feed3.jpeg";
+import instagramFeed4 from "@/assets/feed4.jpg";
+import instagramFeed5 from "@/assets/feed5.jpg";
+import instagramFeed6 from "@/assets/feed6.jpeg";
+import instagramFeed7 from "@/assets/feed7.jpeg";
 import heroPortrait from "@/assets/image.jpg";
 import promoFormationImage from "@/assets/prothesie-ongulaire.jpg";
 import formationBrandImage from "@/assets/brand.jpeg";
@@ -55,7 +62,17 @@ export default function Home() {
           result: formationProthesisteImage,
         }}
       />
-      <InstagramFeedSection />
+      <InstagramFeedSection
+        images={{
+          "post-1": instagramFeed1,
+          "post-2": instagramFeed2,
+          "post-3": instagramFeed3,
+          "post-4": instagramFeed4,
+          "post-5": instagramFeed5,
+          "post-6": instagramFeed6,
+          "post-7": instagramFeed7,
+        }}
+      />
     </main>
   );
 }

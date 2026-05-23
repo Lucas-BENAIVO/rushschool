@@ -16,8 +16,8 @@ export function InstagramFeedSection({ images }: InstagramFeedSectionProps) {
     >
       <InstagramFeedTopBorder />
 
-      <div className="mx-auto max-w-[var(--kba-container-max)] px-5 py-6 sm:px-8 sm:py-8">
-        <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-6">
+      <div className="mx-auto max-w-[var(--kba-container-max)] px-5 py-3 sm:px-8 sm:py-4">
+        <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:gap-5">
           <InstagramFeedIntro />
           <InstagramFeedGallery images={images} />
         </div>

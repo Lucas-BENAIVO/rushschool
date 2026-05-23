@@ -13,7 +13,7 @@ type InstagramFeedGalleryProps = {
 export function InstagramFeedGallery({ images = {} }: InstagramFeedGalleryProps) {
   return (
     <div
-      className="min-w-0 flex-1 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      className="min-w-0 flex-1 overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       aria-label="Aperçu du fil Instagram"
     >
       <div className="flex gap-2 sm:gap-2.5">
