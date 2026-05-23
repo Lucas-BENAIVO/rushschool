@@ -14,6 +14,7 @@ import formationVolumeRusseImage from "@/assets/cilrusse.jpeg";
 import formationProthesisteImage from "@/assets/prothesie-ongulaire.jpg";
 import { FeaturedFormations } from "@/components/formations";
 import { Hero } from "@/components/hero";
+import { InstagramFeedSection } from "@/components/instagram-feed";
 import { PromoBanner } from "@/components/promo-banner";
 import { ShowcaseSection } from "@/components/showcase";
 
@@ -54,6 +55,7 @@ export default function Home() {
           result: formationProthesisteImage,
         }}
       />
+      <InstagramFeedSection />
     </main>
   );
 }
