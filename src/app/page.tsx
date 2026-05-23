@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import apresImage from "@/assets/apres.jpg";
 import avantImage from "@/assets/avant.jpg";
+import kit2ShopImage from "@/assets/kit2.jpg";
+import kit3ShopImage from "@/assets/kit3.jpg";
+import kitShopImage from "@/assets/kit.jpg";
 import heroPortrait from "@/assets/image.jpg";
 import promoFormationImage from "@/assets/prothesie-ongulaire.jpg";
 import formationBrandImage from "@/assets/brand.jpeg";
@@ -35,6 +38,11 @@ export default function Home() {
         resultsImages={{
           before: avantImage,
           after: apresImage,
+        }}
+        shopImages={{
+          "kit-ongles": kitShopImage,
+          "kit-cils": kit2ShopImage,
+          "lampe-uv": kit3ShopImage,
         }}
       />
       <section

@@ -24,7 +24,7 @@ export const SHOP_PRODUCTS = [
     subtitle: "Ongulaire",
     price: "89,99 €",
     href: boutiquePath("kits-ongles"),
-    imageFile: "kit-ongulaire.jpg",
+    imageFile: "kit.jpg",
   },
   {
     id: "kit-cils",
@@ -32,7 +32,7 @@ export const SHOP_PRODUCTS = [
     subtitle: "Complet",
     price: "69,99 €",
     href: boutiquePath("kits-cils"),
-    imageFile: "kit-cils.jpg",
+    imageFile: "kit2.jpg",
   },
   {
     id: "lampe-uv",
@@ -40,7 +40,7 @@ export const SHOP_PRODUCTS = [
     subtitle: "Professionnelle",
     price: "49,99 €",
     href: boutiquePath("materiel"),
-    imageFile: "lampe-uv.jpg",
+    imageFile: "kit3.jpg",
   },
 ] as const;
 

@@ -22,13 +22,19 @@ export function ShopProductCard({
 }: ShopProductCardProps) {
   return (
     <article className="flex h-full w-full flex-col overflow-hidden rounded-xl bg-white shadow-[0_4px_20px_rgba(0,0,0,0.05)]">
-      <div className="relative aspect-[4/3] w-full bg-gradient-to-br from-[#f3e4e2] to-[#e8d4d2]">
+      <div
+        className={`relative aspect-[4/3] w-full overflow-hidden ${
+          imageSrc
+            ? "bg-white"
+            : "bg-gradient-to-br from-[#f3e4e2] to-[#e8d4d2]"
+        }`}
+      >
         {imageSrc ? (
           <Image
             src={imageSrc}
             alt={title}
             fill
-            className="object-cover object-center p-2"
+            className="object-cover object-center"
             sizes="180px"
           />
         ) : (
