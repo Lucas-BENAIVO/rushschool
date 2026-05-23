@@ -1,16 +1,20 @@
 import type { Metadata } from "next";
-import { PageShell } from "@/components/layout/PageShell";
+import { AvisElevesSection } from "@/components/avis-eleves";
+import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
+import { avisElevesBreadcrumbs } from "@/lib/breadcrumbs";
+import { AVIS_ELEVES_IMAGES } from "@/lib/avis-eleves-images";
 
 export const metadata: Metadata = {
-  title: "Avis élèves | K Beauty Academy",
-  description: "Témoignages et résultats de nos élèves.",
+  title: "Avis élèves",
+  description:
+    "Témoignages et résultats avant/après des élèves K Beauty Academy — formations ongles et cils.",
 };
 
 export default function AvisElevesPage() {
   return (
-    <PageShell
-      title="Avis élèves"
-      description="Témoignages et avant / après — contenu à venir."
-    />
+    <main className="flex-1">
+      <BreadcrumbBar items={avisElevesBreadcrumbs()} />
+      <AvisElevesSection images={AVIS_ELEVES_IMAGES} />
+    </main>
   );
 }

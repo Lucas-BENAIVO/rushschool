@@ -34,6 +34,13 @@ export function ShopColumn({ images = {} }: ShopColumnProps) {
             href={product.href}
             imageFile={product.imageFile}
             imageSrc={images[product.id]}
+            cartItem={{
+              productId: product.id,
+              slug: product.slug,
+              title: product.title,
+              subtitle: product.subtitle,
+              price: product.price,
+            }}
           />
           </div>
         ))}

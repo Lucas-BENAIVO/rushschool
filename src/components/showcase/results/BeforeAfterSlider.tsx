@@ -9,9 +9,16 @@ type BeforeAfterSliderProps = {
   afterSrc?: ImageSource;
   beforeImageFile: string;
   afterImageFile: string;
+  /** default : accueil / colonne étroite — large : page avis, plus de hauteur */
+  size?: "default" | "large";
+  /** Étire le slider sur la hauteur du parent (grille showcase) */
+  fillHeight?: boolean;
 };
 
-const IMAGE_CLASS =
+const IMAGE_CLASS_DEFAULT =
+  "object-cover object-center select-none";
+
+const IMAGE_CLASS_LARGE =
   "object-cover object-[center_42%] select-none";
 
 export function BeforeAfterSlider({
@@ -19,6 +26,8 @@ export function BeforeAfterSlider({
   afterSrc,
   beforeImageFile,
   afterImageFile,
+  size = "default",
+  fillHeight = false,
 }: BeforeAfterSliderProps) {
   const [position, setPosition] = useState(50);
   const [isInteractive, setIsInteractive] = useState(false);
@@ -28,10 +37,22 @@ export function BeforeAfterSlider({
     queueMicrotask(() => setIsInteractive(true));
   }, []);
   const beforeLayerWidth = `${(100 / safePosition) * 100}%`;
+  const imageClass = size === "large" ? IMAGE_CLASS_LARGE : IMAGE_CLASS_DEFAULT;
+
+  const frameClass = fillHeight
+    ? "relative h-full min-h-[240px] w-full lg:absolute lg:inset-0 lg:aspect-auto lg:min-h-[260px]"
+    : size === "large"
+      ? "relative h-[300px] w-full sm:h-[305px] lg:h-[310px]"
+      : "relative w-full aspect-[16/10] min-h-[200px] sm:min-h-[220px]";
+
+  const shellClass =
+    size === "large"
+      ? "relative mx-auto w-full max-w-full overflow-hidden rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.06)] sm:max-w-[400px] lg:mx-0 lg:w-[440px] lg:max-w-[440px]"
+      : "relative h-full w-full max-w-full overflow-hidden rounded-xl bg-gradient-to-br from-[#f3e4e2] to-[#e8d4d2] shadow-[0_4px_20px_rgba(0,0,0,0.06)]";
 
   return (
-    <div className="relative h-full overflow-hidden rounded-xl bg-gradient-to-br from-[#f3e4e2] to-[#e8d4d2] shadow-[0_4px_20px_rgba(0,0,0,0.06)]">
-      <div className="relative aspect-[16/10] w-full lg:absolute lg:inset-0 lg:aspect-auto lg:min-h-[220px]">
+    <div className={shellClass}>
+      <div className={frameClass}>
         {/* Après — calque pleine largeur */}
         <div className="absolute inset-0 overflow-hidden">
           {afterSrc ? (
@@ -39,7 +60,7 @@ export function BeforeAfterSlider({
               src={afterSrc}
               alt="Après formation"
               fill
-              className={IMAGE_CLASS}
+              className={imageClass}
               sizes="(max-width: 1024px) 100vw, 33vw"
               draggable={false}
             />
@@ -64,7 +85,7 @@ export function BeforeAfterSlider({
                 src={beforeSrc}
                 alt="Avant formation"
                 fill
-                className={IMAGE_CLASS}
+                className={imageClass}
                 sizes="(max-width: 1024px) 100vw, 33vw"
                 draggable={false}
               />

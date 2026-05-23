@@ -49,3 +49,31 @@ body {
   box-shadow: 4px 0 24px rgba(0, 0, 0, 0.08);
   animation: mobile-menu-drawer-in 0.26s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
+
+@keyframes cart-link-bump {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.12);
+  }
+}
+
+@keyframes cart-badge-pop {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.28);
+  }
+}
+
+.cart-link-bump {
+  animation: cart-link-bump 0.45s ease-out;
+}
+
+.cart-badge-pop {
+  animation: cart-badge-pop 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}

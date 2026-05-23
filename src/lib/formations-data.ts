@@ -8,6 +8,7 @@ export type FormationCardData = {
   title: string;
   subtitle: string;
   price: string;
+  description: string;
   features: string[];
   ctaLabel: string;
   href: string;
@@ -18,6 +19,14 @@ export type FormationCardData = {
   outlineTextPrimary?: boolean;
 };
 
+export function getFormationBySlug(slug: string) {
+  return FEATURED_FORMATIONS.find((formation) => formation.slug === slug);
+}
+
+export function getAllFormationSlugs() {
+  return FEATURED_FORMATIONS.map((formation) => formation.slug);
+}
+
 export const FEATURED_FORMATIONS: FormationCardData[] = [
   {
     id: "prothesiste",
@@ -25,6 +34,8 @@ export const FEATURED_FORMATIONS: FormationCardData[] = [
     title: "Prothésiste Ongulaire",
     subtitle: "2 jours intensifs",
     price: "300€",
+    description:
+      "Une formation intensive pour apprendre les bases de la prothésie ongulaire et repartir avec une méthode claire, applicable en salon ou à domicile.",
     features: [
       "Pose gel + chablon",
       "Rallongement",
@@ -43,6 +54,8 @@ export const FEATURED_FORMATIONS: FormationCardData[] = [
     title: "Cils : Pose Cil à Cil",
     subtitle: "Formation débutante",
     price: "350€",
+    description:
+      "Idéale pour débuter en extensions de cils : techniques, isolation et rendu naturel, avec un accompagnement pas à pas en petit groupe.",
     features: [
       "Maîtrise de la pose cil à cil",
       "Isolation parfaite",
@@ -60,6 +73,8 @@ export const FEATURED_FORMATIONS: FormationCardData[] = [
     title: "Cils : Volume Russe",
     subtitle: "Formation avancée",
     price: "450€",
+    description:
+      "Perfectionnez votre technique de volume russe : éventails, densité, mapping et finitions pour un regard structuré et glamour.",
     features: [
       "Technique volume russe",
       "Éventails faits main",
@@ -77,6 +92,8 @@ export const FEATURED_FORMATIONS: FormationCardData[] = [
     title: "Nail Art & Décorations",
     subtitle: "1 jour",
     price: "250€",
+    description:
+      "Un atelier créatif pour enrichir vos poses : tendances nail art, effets spéciaux et finitions qui font la différence.",
     features: [
       "Nail art tendance",
       "Effets spéciaux",
@@ -95,6 +112,8 @@ export const FEATURED_FORMATIONS: FormationCardData[] = [
     title: "Business & Branding",
     subtitle: "100% en ligne",
     price: "200€",
+    description:
+      "Structurez votre activité beauté : positionnement, visibilité Instagram, tarification et acquisition client, à votre rythme.",
     features: [
       "Créer son activité",
       "Stratégie Instagram",

@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { PageShell } from "@/components/layout/PageShell";
+import { CartPageContent } from "@/components/cart/CartPageContent";
 
 export const metadata: Metadata = {
-  title: "Panier | K Beauty Academy",
+  title: "Panier",
+  description: "Votre panier K Beauty Academy.",
 };
 
 export default function PanierPage() {
   return (
-    <PageShell
-      title="Panier"
-      description="Votre panier est vide pour le moment."
-    />
+    <main className="flex-1">
+      <CartPageContent />
+    </main>
   );
 }

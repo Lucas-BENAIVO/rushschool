@@ -8,12 +8,7 @@ export function NavMenu() {
       aria-label="Navigation principale"
     >
       {NAV_ITEMS.map((item) => (
-        <NavLink
-          key={item.href}
-          href={item.href}
-          label={item.label}
-          hasDropdown={"hasDropdown" in item ? item.hasDropdown : false}
-        />
+        <NavLink key={item.href} href={item.href} label={item.label} />
       ))}
     </nav>
   );

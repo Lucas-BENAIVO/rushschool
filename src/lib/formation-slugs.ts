@@ -1,7 +1,5 @@
-export const FORMATION_SLUGS: Record<string, string> = {
-  "prothesiste-ongulaire": "Prothésiste Ongulaire",
-  "cils-a-cil": "Cil à Cil",
-  "volume-russe": "Volume Russe",
-  "nail-art": "Nail Art",
-  "business-branding": "Business & Branding",
-};
+import { FEATURED_FORMATIONS } from "@/lib/formations-data";
+
+export const FORMATION_SLUGS: Record<string, string> = Object.fromEntries(
+  FEATURED_FORMATIONS.map((formation) => [formation.slug, formation.title]),
+);

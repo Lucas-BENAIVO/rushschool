@@ -1,16 +1,19 @@
 import type { Metadata } from "next";
-import { PageShell } from "@/components/layout/PageShell";
+import { ContactSection } from "@/components/contact";
+import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
+import { contactBreadcrumbs } from "@/lib/breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Contact | K Beauty Academy",
-  description: "Contactez-nous ou réservez un appel découverte.",
+  title: "Contact",
+  description:
+    "Contactez K Beauty Academy : formulaire, téléphone, e-mail et réservation d'appel découverte.",
 };
 
 export default function ContactPage() {
   return (
-    <PageShell
-      title="Contact"
-      description="Formulaire et réservation d'appel — contenu à venir."
-    />
+    <main className="flex-1">
+      <BreadcrumbBar items={contactBreadcrumbs()} />
+      <ContactSection />
+    </main>
   );
 }

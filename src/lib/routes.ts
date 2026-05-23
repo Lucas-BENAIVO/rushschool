@@ -10,7 +10,7 @@ export const ROUTES = {
   recherche: "/recherche",
   panier: "/panier",
   offreLancement: "/#offre",
-  reserverAppel: "/contact",
+  reserverAppel: "/reserver-un-appel",
   financement: "/financement",
   conditionsGenerales: "/conditions-generales",
   faq: "/faq",
@@ -22,6 +22,10 @@ export function formationPath(slug: string) {
 
 export function boutiquePath(slug: string) {
   return `${ROUTES.boutique}/${slug}`;
+}
+
+export function blogPath(slug: string) {
+  return `${ROUTES.blog}/${slug}`;
 }
 
 export type RoutePath = (typeof ROUTES)[keyof typeof ROUTES];

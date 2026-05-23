@@ -1,6 +1,6 @@
 export function FooterNewsletter() {
   return (
-    <div>
+    <div className="w-full xl:ml-auto xl:max-w-[20rem]">
       <h3 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--kba-footer-muted)]">
         Rejoins notre communauté
       </h3>
@@ -8,7 +8,7 @@ export function FooterNewsletter() {
         Conseils, nouveautés, offres exclusives…
       </p>
       <form
-        className="flex w-full max-w-sm flex-col gap-3 sm:flex-row sm:items-stretch sm:gap-2"
+        className="flex w-full flex-col gap-3 sm:flex-row sm:items-stretch sm:gap-2"
         action="#"
         method="post"
         aria-label="Inscription newsletter"

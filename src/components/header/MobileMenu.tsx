@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import { CloseIcon } from "@/components/icons/CloseIcon";
 import { MenuIcon } from "@/components/icons/MenuIcon";
-import { ChevronDownIcon } from "@/components/icons/ChevronDownIcon";
 import { NAV_ITEMS } from "@/lib/nav-items";
 import { ROUTES } from "@/lib/routes";
 
@@ -88,7 +87,7 @@ export function MobileMenu() {
                     <li key={item.href}>
                       <Link
                         href={item.href}
-                        className={`relative flex min-h-[52px] items-center justify-between py-3 text-[13px] tracking-wide transition-colors ${
+                        className={`relative flex min-h-[52px] items-center py-3 text-[13px] tracking-wide transition-colors ${
                           active
                             ? "font-semibold text-[var(--kba-primary)] before:absolute before:inset-y-3 before:-left-6 before:w-[2px] before:rounded-full before:bg-[var(--kba-primary)] before:content-['']"
                             : "font-medium text-[var(--kba-charcoal)] hover:text-[var(--kba-primary)]"
@@ -96,10 +95,7 @@ export function MobileMenu() {
                         onClick={close}
                         aria-current={active ? "page" : undefined}
                       >
-                        <span>{item.label}</span>
-                        {"hasDropdown" in item && item.hasDropdown ? (
-                          <ChevronDownIcon className="text-[var(--kba-muted)]" />
-                        ) : null}
+                        {item.label}
                       </Link>
                     </li>
                   );

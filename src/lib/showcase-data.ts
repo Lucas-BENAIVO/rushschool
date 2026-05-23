@@ -20,26 +20,29 @@ export const SHOP_CONTENT = {
 export const SHOP_PRODUCTS = [
   {
     id: "kit-ongles",
+    slug: "kit-prothesiste-ongulaire",
     title: "Kit Prothésiste Ongulaire",
     subtitle: "Ongulaire",
     price: "89,99 €",
-    href: boutiquePath("kits-ongles"),
+    href: boutiquePath("kit-prothesiste-ongulaire"),
     imageFile: "kit.jpg",
   },
   {
     id: "kit-cils",
+    slug: "kit-cils-complet",
     title: "Kit Cil à Cil Complet",
     subtitle: "Complet",
     price: "69,99 €",
-    href: boutiquePath("kits-cils"),
+    href: boutiquePath("kit-cils-complet"),
     imageFile: "kit2.jpg",
   },
   {
     id: "lampe-uv",
+    slug: "lampe-uv-led",
     title: "Lampe UV/LED Professionnelle",
     subtitle: "Professionnelle",
     price: "49,99 €",
-    href: boutiquePath("materiel"),
+    href: boutiquePath("lampe-uv-led"),
     imageFile: "kit3.jpg",
   },
 ] as const;

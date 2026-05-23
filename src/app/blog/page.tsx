@@ -1,16 +1,20 @@
 import type { Metadata } from "next";
-import { PageShell } from "@/components/layout/PageShell";
+import { BlogCatalogSection } from "@/components/blog";
+import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
+import { blogCatalogBreadcrumbs } from "@/lib/breadcrumbs";
+import { BLOG_IMAGES } from "@/lib/blog-images";
 
 export const metadata: Metadata = {
-  title: "Blog | K Beauty Academy",
-  description: "Conseils, actualités et inspiration nail art.",
+  title: "Blog",
+  description:
+    "Conseils, tendances et actualités prothésie ongulaire et extensions de cils — K Beauty Academy.",
 };
 
 export default function BlogPage() {
   return (
-    <PageShell
-      title="Blog"
-      description="Articles et actualités — contenu à venir."
-    />
+    <main className="flex-1">
+      <BreadcrumbBar items={blogCatalogBreadcrumbs()} />
+      <BlogCatalogSection images={BLOG_IMAGES} />
+    </main>
   );
 }

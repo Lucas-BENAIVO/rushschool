@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat, Playfair_Display } from "next/font/google";
+import { CartRoot } from "@/components/cart/CartRoot";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import "./globals.css";
@@ -36,9 +37,11 @@ export default function RootLayout({
       className={`${montserrat.variable} ${playfair.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
-        <Header />
-        {children}
-        <Footer />
+        <CartRoot>
+          <Header />
+          {children}
+          <Footer />
+        </CartRoot>
       </body>
     </html>
   );

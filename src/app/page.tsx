@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import apresImage from "@/assets/apres.jpg";
 import avantImage from "@/assets/avant.jpg";
-import kit2ShopImage from "@/assets/kit2.jpg";
-import kit3ShopImage from "@/assets/kit3.jpg";
-import kitShopImage from "@/assets/kit.jpg";
 import promoCoursImage from "@/assets/cours.jpg";
 import instagramFeed1 from "@/assets/feed1.jpg";
 import instagramFeed2 from "@/assets/feed2.jpeg";
@@ -14,12 +11,9 @@ import instagramFeed6 from "@/assets/feed6.jpeg";
 import instagramFeed7 from "@/assets/feed7.jpeg";
 import heroPortrait from "@/assets/image.jpg";
 import promoFormationImage from "@/assets/prothesie-ongulaire.jpg";
-import formationBrandImage from "@/assets/brand.jpeg";
-import formationCilsACilImage from "@/assets/cilacil.jpeg";
-import formationNailArtImage from "@/assets/nail.jpeg";
-import formationVolumeRusseImage from "@/assets/cilrusse.jpeg";
-import formationProthesisteImage from "@/assets/prothesie-ongulaire.jpg";
 import { FeaturedFormations } from "@/components/formations";
+import { BOUTIQUE_IMAGES } from "@/lib/boutique-images";
+import { FORMATION_IMAGES } from "@/lib/formation-images";
 import { Hero } from "@/components/hero";
 import { InstagramFeedSection } from "@/components/instagram-feed";
 import { PromoBanner } from "@/components/promo-banner";
@@ -35,31 +29,19 @@ export default function Home() {
   return (
     <main className="flex-1">
       <Hero imageSrc={heroPortrait} promoImageSrc={promoFormationImage} />
-      <FeaturedFormations
-        images={{
-          prothesiste: formationProthesisteImage,
-          "cils-cil-a-cil": formationCilsACilImage,
-          "volume-russe": formationVolumeRusseImage,
-          "nail-art": formationNailArtImage,
-          business: formationBrandImage,
-        }}
-      />
+      <FeaturedFormations images={FORMATION_IMAGES} />
       <ShowcaseSection
         resultsImages={{
           before: avantImage,
           after: apresImage,
         }}
-        shopImages={{
-          "kit-ongles": kitShopImage,
-          "kit-cils": kit2ShopImage,
-          "lampe-uv": kit3ShopImage,
-        }}
+        shopImages={BOUTIQUE_IMAGES}
       />
       <PromoBanner
         galleryImages={{
           classroom: promoCoursImage,
-          practice: formationNailArtImage,
-          result: formationProthesisteImage,
+          practice: FORMATION_IMAGES["nail-art"],
+          result: FORMATION_IMAGES.prothesiste,
         }}
       />
       <InstagramFeedSection

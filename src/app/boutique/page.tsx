@@ -1,16 +1,20 @@
 import type { Metadata } from "next";
-import { PageShell } from "@/components/layout/PageShell";
+import { BoutiqueCatalogSection } from "@/components/boutique";
+import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
+import { boutiqueCatalogBreadcrumbs } from "@/lib/breadcrumbs";
+import { BOUTIQUE_IMAGES } from "@/lib/boutique-images";
 
 export const metadata: Metadata = {
-  title: "Boutique | K Beauty Academy",
-  description: "Matériel professionnel pour prothésiste ongulaire et extensions de cils.",
+  title: "Boutique",
+  description:
+    "Kits, lampes UV et accessoires professionnels pour prothésiste ongulaire et extensions de cils.",
 };
 
 export default function BoutiquePage() {
   return (
-    <PageShell
-      title="Boutique"
-      description="Kits, lampes UV et accessoires — contenu à venir."
-    />
+    <main className="flex-1">
+      <BreadcrumbBar items={boutiqueCatalogBreadcrumbs()} tone="showcase" />
+      <BoutiqueCatalogSection images={BOUTIQUE_IMAGES} />
+    </main>
   );
 }

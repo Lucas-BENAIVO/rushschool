@@ -22,6 +22,7 @@ export function HeroPromoCard({ imageSrc }: HeroPromoCardProps) {
             src={imageSrc}
             alt={imageAlt}
             fill
+            loading="lazy"
             className="object-cover object-center"
             sizes="56px"
           />

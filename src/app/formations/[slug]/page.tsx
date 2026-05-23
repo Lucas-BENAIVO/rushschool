@@ -1,39 +1,51 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { PageShell } from "@/components/layout/PageShell";
-import { FORMATION_SLUGS } from "@/lib/formation-slugs";
+import { BreadcrumbBar } from "@/components/layout/BreadcrumbBar";
+import { FormationDetailSection } from "@/components/formations/detail/FormationDetailSection";
+import { formationDetailBreadcrumbs } from "@/lib/breadcrumbs";
+import { FORMATION_IMAGES } from "@/lib/formation-images";
+import {
+  getAllFormationSlugs,
+  getFormationBySlug,
+} from "@/lib/formations-data";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
 
 export function generateStaticParams() {
-  return Object.keys(FORMATION_SLUGS).map((slug) => ({ slug }));
+  return getAllFormationSlugs().map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const title = FORMATION_SLUGS[slug];
+  const formation = getFormationBySlug(slug);
 
-  if (!title) {
+  if (!formation) {
     return { title: "Formation introuvable" };
   }
 
-  return { title };
+  return {
+    title: formation.title,
+    description: formation.description,
+  };
 }
 
 export default async function FormationDetailPage({ params }: PageProps) {
   const { slug } = await params;
-  const title = FORMATION_SLUGS[slug];
+  const formation = getFormationBySlug(slug);
 
-  if (!title) {
+  if (!formation) {
     notFound();
   }
 
   return (
-    <PageShell
-      title={title}
-      description="Détail de la formation — contenu à venir."
-    />
+    <main className="flex-1" style={{ backgroundColor: "var(--kba-hero-bg)" }}>
+      <BreadcrumbBar items={formationDetailBreadcrumbs(formation.title)} />
+      <FormationDetailSection
+        formation={formation}
+        imageSrc={FORMATION_IMAGES[formation.id]}
+      />
+    </main>
   );
 }
